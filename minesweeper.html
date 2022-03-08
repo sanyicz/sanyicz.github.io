@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Minesweeper</title>
+<link rel="stylesheet" href="./style.css"> <!-- external css -->
+<script language="JavaScript" type="text/javascript" src="./scripts.js"></script> <!--external javascript -->
+</head>
+
+<body onload='changeLang("");'>
+	<div id="header">
+		<div id="logo">
+			<img id="logo" src="./logo1.jpg" alt="logo"></img>
+		</div>
+		<div id="title">
+			<button class="changeLang" onclick='changeLang("en");'>EN</button>
+			<button class="changeLang" onclick='changeLang("hu");'>HU</button>
+			<h1 lang="en">Minesweeper</h1>
+			<h1 lang="hu">Aknakereső</h1>
+		</div>
+	</div>
+	<div id="menu1">
+		<!-- english -->
+		<a class="menu1" href="./index.html" lang="en">Home</a>
+		<a class="menu1" href="./projects.html" lang="en">Projects</a>
+		<a class="menu1" href="./about.html" lang="en">About</a>
+		<a class="menu1" href="./contact.html" lang="en">Contact</a>
+		<!-- magyar -->
+		<a class="menu1" href="./index.html" lang="hu">Főoldal</a>
+		<a class="menu1" href="./projects.html" lang="hu">Projektek</a>
+		<a class="menu1" href="./about.html" lang="hu">Rólunk</a>
+		<a class="menu1" href="./contact.html" lang="hu">Kapcsolat</a>
+	</div>
+	<div id="menu2">
+		<!-- english -->
+		<a class="menu2" href="./minesweeper.html" lang="en">Minesweeper</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="en">Schedule Planner</a>
+		<a class="menu2" href="./plantmonitor.html" lang="en">Plant Monitor</a>
+		<a class="menu2" href="./carkit.html" lang="en">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="en">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="en">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="en">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="en">This page</a>
+		<!-- magyar -->
+		<a class="menu2" href="./minesweeper.html" lang="hu">Aknakereső</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="hu">Beosztástervező</a>
+		<a class="menu2" href="./plantmonitor.html" lang="hu">Növénymonitor</a>
+		<a class="menu2" href="./carkit.html" lang="hu">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="hu">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="hu">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="hu">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="hu">Ez az oldal</a>
+	</div>
+	<div id="content_en" lang="en">
+		<!-- english -->
+		<h1>Minesweeper</h1>
+		<img id="minesweeper_image1" src="./minesweeper1.png" alt="minesweeper_image1"></img>
+		
+		<h2>Description</h2>
+		<p>An implementation of the classic game. You can change the difficulty (the mine density) by setting the number of mines, the width and height of the field. You can start the game by clicking New game. By left click you can open a field. The number you see on the tile is the total number of mines in neighnouring tiles, that can be at most 8. By right click you can mark a field with an M for mine. The goal is to mark every mine and open every field without a mine.</p>
+		
+		<h2>Source</h2>
+		<p>The UI is made with tkinter. When a too big field is set, the game starts slowly, because the drawing of the game field takes a lot of time, so the program can be optimized.</p>
+		
+		<h2 >To do</h2>
+		<ul>
+			<li>new game starts slowly, make it faster</li>
+			<li>field/tile naming convention (in the code)</li>
+		</ul>
+		
+		<h2>Download</h2>
+		<p><a href="./downloads/minesweeper.py">Minesweeper.py</a></p>
+	</div>
+	<div id="content_hu" lang="hu">
+		<!-- magyar -->
+		<h1>Aknakereső</h1>
+		<img id="minesweeper_image1" src="./minesweeper1.png" alt="minesweeper_image1"></img>
+
+		<h2>Leírás</h2>
+		<p>A klasszikus játék egy megvalósítása. A nehézséget (az aknasűrűséget) az aknák számának és a játéktér méretének változtatásával lehet beállítani. A New game (Új játék) gombra kattintva indul a játék. Bal kattintással felfedhető egy mező. A mezőn lévő szám az összes szomszédos akna számát jelenti, ez legfeljebb 8 lehet. Jobb kattintással lehet egy mezőt aknának jelölni, ekkor egy M (mine = akna) jelenik meg rajta. A cél az összes akna megjelölése és az összes akna nélküli mező felfedése.</p>
+		
+		<h2>Forráskód</h2>
+		<p>A grafikus felület tkinter-rel készült. Ha túl nagy méretű mezőt állítunk meg, a játék lassan indul, mert a játéktér kirajzolása sok időbe telik, tehát van még mit optimalizálni a programon.</p>
+		
+		<h2>Tennivalók</h2>
+		<ul>
+			<li>új játék elindításakor lassú, ezen javítani</li>
+			<li>mező/cserép nevezék (angolul, a forráskódban)</li>
+		</ul>
+		
+		<h2>Letöltés</h2>
+		<p><a href="./downloads/minesweeper.py">Minesweeper.py</a></p>
+	</div>
+	<div id="footer">
+		&copy; 2022
+	</div>
+</body>
+
+</html>

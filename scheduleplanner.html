@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Schedule Planner</title>
+<link rel="stylesheet" href="./style.css"> <!-- external css -->
+<script language="JavaScript" type="text/javascript" src="./scripts.js"></script> <!--external javascript -->
+</head>
+
+<body onload='changeLang("");'>
+	<div id="header">
+		<div id="logo">
+			<img id="logo" src="./logo1.jpg" alt="logo"></img>
+		</div>
+		<div id="title">
+			<button class="changeLang" onclick='changeLang("en");'>EN</button>
+			<button class="changeLang" onclick='changeLang("hu");'>HU</button>
+			<h1 lang="en">Schedule Planner</h1>
+			<h1 lang="hu">Beosztástervező</h1>
+		</div>
+	</div>
+	<div id="menu1">
+		<!-- english -->
+		<a class="menu1" href="./index.html" lang="en">Home</a>
+		<a class="menu1" href="./projects.html" lang="en">Projects</a>
+		<a class="menu1" href="./about.html" lang="en">About</a>
+		<a class="menu1" href="./contact.html" lang="en">Contact</a>
+		<!-- magyar -->
+		<a class="menu1" href="./index.html" lang="hu">Főoldal</a>
+		<a class="menu1" href="./projects.html" lang="hu">Projektek</a>
+		<a class="menu1" href="./about.html" lang="hu">Rólunk</a>
+		<a class="menu1" href="./contact.html" lang="hu">Kapcsolat</a>
+	</div>
+	<div id="menu2">
+		<!-- english -->
+		<a class="menu2" href="./minesweeper.html" lang="en">Minesweeper</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="en">Schedule Planner</a>
+		<a class="menu2" href="./plantmonitor.html" lang="en">Plant Monitor</a>
+		<a class="menu2" href="./carkit.html" lang="en">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="en">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="en">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="en">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="en">This page</a>
+		<!-- magyar -->
+		<a class="menu2" href="./minesweeper.html" lang="hu">Aknakereső</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="hu">Beosztástervező</a>
+		<a class="menu2" href="./plantmonitor.html" lang="hu">Növénymonitor</a>
+		<a class="menu2" href="./carkit.html" lang="hu">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="hu">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="hu">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="hu">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="hu">Ez az oldal</a>
+	</div>
+	<div id="content_en" lang="en">
+		<!-- english -->
+		<h1>Schedule Planner</h1>
+		<img id="scheduleplanner_image1" src="./scheduleplanner1.png" alt="scheduleplanner_image1"></img>
+		<h2>Description</h2>
+		<p>The idea came from the company where I worked. I was a kitchen helper and transporter in the kitchen for the hospitals in Szeged. I was employed through an employment agency and our schedule was made weekly based on the messages in which we wrote when we had free time to work. This program is an exercise to make a software that can help one to manage these schedules better. It was never published and used.</p>
+		<p>The program is available only in Hungarian.</p>
+		<p>When you start the program, you first see the main menu, from here can you reach every feature directly.</p>
+		<p>The first item is for handling the workers (Dolgozók kezelése = Manage workes). Here you have the list of the actual workers. You can add workers, modify their data or delete them. You can save the modifications by clicking Adatok mentése (Save data) button.</p>
+		<p>The next item is for handling the work schedule requests from the company (Munkarend kezelése = Manage company requests). Here you can work set, how many workers does the company need for a given week for the different shifts. The program later uses this data as a limit to assigning workers in a given shift. You can change the available shifts in the shift manager (Műszakok kezelése = Manage shifts).</p>
+		<p>The third item is for handling the workers' requests (Ráérések kezelése = Manage worker requests). This item can be reached from the company handling interface. Here you can set, when would a given worker like to work in a given week. You can save the modifications by clicking Ráérést lead (Set request) button.</p>
+		<p>In the next item you can create the schedule. Here you can see a table that contains the list of workers for every shift of every day of a given week. By setting a tick you assign the worker to the shift. You can create the whole schedule by yourself, create it partly and then let the algorithm to finish it, or let the algoritm do the work completely. You can finalize and save the process by clicking Beosztás készítése (Create schedule) button. The completed schedule can be exported to an Excel file (Export xlxs-be = Export to xlsx).</p>
+		<p>Next you have the help (Súgó = Help). With the last button you can exit the program (Kilépés = Exit).</p>
+		<img id="scheduleplanner_image2" src="./scheduleplanner2.png" alt="scheduleplanner_image2"></img>
+		<h2>Source</h2>
+		<p>Modules used:</p>
+		<ul>
+			<li>sqlite3 for database management</li>
+			<li>openpyxl for exporting into Excel</li>
+		</ul>
+		<p>The program's graphical interface is made with tkinter (a version made with PyQt5 also exists). The SHScheduler class is a child of tkinter's Frame class in order to easily place the application onto a tkinter window.</p>
+		<p>The initialization method loads the database and and creates the main menu window. After that, the code is divided into sections based on the software's working principle (the process of planning schedules), as it is written in the description above. Each section is structured basically the same: first we define methods for creating and managing the graphical user interface, then methods for interacting with the database.</p>
+		<h2>To do</h2>
+		<ul>
+			<li>add information bar (for example: Worker requests saved)</li>
+			<li>better schedule making algorithms: based on the performance of worker, etc.</li>
+		</ul>
+		<h2>Download</h2>
+		<p><a href="./scheduleplanner.zip">Schedule Planner</a></p>
+	</div>
+	<div id="content_hu" lang="hu">
+		<!-- english -->
+		<h1>Beosztástervező</h1>
+		<img id="scheduleplanner_image1" src="./scheduleplanner1.png" alt="scheduleplanner_image1"></img>
+		<h2>Leírás</h2>
+		<p>Az ötlet onnan jött, hogy diákként dolgoztam egy kórház konyháján iskolaszövetkezeten keresztül. Heti beosztásunk volt, amit az üzenetben elküldött ráéréseink, szabadidőnk alapján készítettek. Ez a program a beosztástervezés és -kezelés jobb menedzselésére készült saját ötlet alapján, gyakorlásként, de nem volt bemutatva és használva.</p>
+		<p>A program csak magyarul elérhető.</p>
+		<p>A program indítása után a főmenüt látjuk. Innen minden funkció közvetlenül elérhető.</p>
+		<p>The first item is for handling the workers (Dolgozók kezelése = Manage workes). Here you have the list of the actual workers. You can add workers, modify their data or delete them. You can save the modifications by clicking Adatok mentése (Save data) button.</p>
+		<p>The next item is for handling the work schedule requests from the company (Munkarend kezelése = Manage company requests). Here you can work set, how many workers does the company need for a given week for the different shifts. The program later uses this data as a limit to assigning workers in a given shift. You can change the available shifts in the shift manager (Műszakok kezelése = Manage shifts).</p>
+		<p>The third item is for handling the workers' requests (Ráérések kezelése = Manage worker requests). This item can be reached from the company handling interface. Here you can set, when would a given worker like to work in a given week. You can save the modifications by clicking Ráérést lead (Set request) button.</p>
+		<p>In the next item you can create the schedule. Here you can see a table that contains the list of workers for every shift of every day of a given week. By setting a tick you assign the worker to the shift. You can create the whole schedule by yourself, create it partly and then let the algorithm to finish it, or let the algoritm do the work completely. You can finalize and save the process by clicking Beosztás készítése (Create schedule) button. The completed schedule can be exported to an Excel file (Export xlxs-be = Export to xlsx).</p>
+		<p>Next you have the help (Súgó = Help). With the last button you can exit the program (Kilépés = Exit).</p>
+		<img id="scheduleplanner_image2" src="./scheduleplanner2.png" alt="scheduleplanner_image2"></img>
+		<h2>Forráskód</h2>
+		<p>Felhasznált modulok:</p>
+		<ul>
+			<li>sqlite3 adatbáziskezeléshez</li>
+			<li>openpyxl Excel-be történő exportáláshoz</li>
+		</ul>
+		<p>A program grafikus felülete tkinter-rel készült (létezik egy PyQt5-tel készült változat is). Az SHScheduler osztály a tkinter Frame osztályából öröklődik azért, hogy az alkalmazást egyszerű legyen elhelyezni egy tkinter ablakban.</p>
+		<p>Az inicializáló metódus betölti az adatbázist és létrehozza a főmenü ablakot. A kód a program működési elve (a beosztástervezés folyamata) szerint van szakaszokra osztva, ahogy a leírásban olvasható. Minden szakasz hasonlóan épül fel: először a grafikus felületet létrehozó és kezelő metódusok vannak definiálva, aztán az adatbázist kezelőek.</p>
+		<h2>Tennivalók</h2>
+		<ul>
+			<li>információs sáv hozzáadása (például: Ráérések mentve)</li>
+			<li>jobb beosztáskészítő algoritmusok (például a dolgozó teljesítménye alapján)</li>
+		</ul>
+		<h2>Letöltés</h2>
+		<p><a href="./scheduleplanner.zip">Beosztástervező</a></p>
+	</div>
+	<div id="footer">
+		&copy; 2022
+	</div>
+</body>
+
+</html>

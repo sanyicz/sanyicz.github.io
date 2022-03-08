@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Car Kit</title>
+<link rel="stylesheet" href="./style.css"> <!-- external css -->
+</head>
+
+<body>
+	<div id="header">
+		<div id="logo">
+			<img id="logo" src="./logo1.jpg" alt="logo"></img>
+		</div>
+		<div id="title">
+			<h1 lang="en">Car Kit</h1>
+			<!-- <h1 lang="hu">Car Kit</h1> -->
+		</div>
+	</div>
+	<div id="menu1">
+		<a class="menu1" href="./index.html">Home</a>
+		<a class="menu1" href="./projects.html">Projects</a>
+		<a class="menu1" href="./about.html">About</a>
+		<a class="menu1" href="./contact.html">Contact</a>
+	</div>
+	<div id="menu2">
+		<a class="menu2" href="./minesweeper.html">Minesweeper</a>
+		<a class="menu2" href="./plantmonitor.html">Plant Monitor</a>
+		<a class="menu2" href="./scheduleplanner.html">Schedule Planner</a>
+		<a class="menu2" href="./carkit.html">Car Kit</a>
+		<a class="menu2" href="./gta2d.html">GTA 2D</a>
+		
+	</div>
+	<div id="content">
+		<h1>Car Kit</h1>
+		<img id="carkit_image1" src="./carkit1.png" alt="carkit_image1"></img>
+		<h2>Description</h2>
+		<p>The onboard computer display in my car is not working - that's where the idea came from. I wanted to recreate some of the functionality of this display. The first thing to measure was the temperature: inside the car, the air outside and eventually the temperature under the hood (at that time the car have got problems with cooling). For comfortable travel the relative humidity inside is also an important indicator. The idea of a reversing radar came when I saw that an ultrasonic distance measurement sensor for Arduino actually exists.</p>
+		<p>The system is based on an Arduino Nano microcontroller. Time is measured by an RTC module. Inner and outer air temperature is measured by DS18B20 sensors, inner relative humidity is measured by a DHT11 sensor. For distance measurement I've used a HC-SR04 ultrasonic sensor. A bluetooth module is used to connect the measurement device to a smartphone. A buzzer is added to signal when the car is too close to an obstruction. I used the VectorDisplay library to create a display on the phone.</p>
+		<p>Because the distance measurement is not connected with the car being actually in reverse, the program continuously measures the distance behind the car. The other values, however, are only measured and updated once in every minute.</p>
+		<img id="carkit_image2" src="./carkit2.png" alt="carkit_image2"></img>
+		<h2>Source</h2>
+		<p></p>
+		<h2>To do</h2>
+		<ul>
+			<li>the program stops when the phone goes to sleep, the data collection stops - why?</li>
+			<li>add functions: battery voltage, under-the-hood temperature, tire pressure, etc.</li>
+		</ul>
+		<h2>Download</h2>
+		<p><a href="https://github.com/arpruss/vectordisplayarduino" target=”_blank”>VectorDisplay library</a></p>
+		<p><a href="./downloads/carkit.zip">Car Kit</a></p>
+		<p><a href="./.html"></a></p>
+	</div>
+	<div id="footer">
+		&copy; 2022
+	</div>
+</body>
+
+</html>

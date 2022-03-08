@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>GTA 2D</title>
+<link rel="stylesheet" href="./style.css"> <!-- external css -->
+</head>
+
+<body>
+	<div id="header">
+		<div id="logo">
+			<img id="logo" src="./logo1.jpg" alt="logo"></img>
+		</div>
+		<div id="title">
+			<h1 lang="en">GTA 2D</h1>
+			<!-- <h1 lang="hu">GTA 2D</h1> -->
+		</div>
+	</div>
+	<div id="menu1">
+		<a class="menu1" href="./index.html">Home</a>
+		<a class="menu1" href="./projects.html">Projects</a>
+		<a class="menu1" href="./about.html">About</a>
+		<a class="menu1" href="./contact.html">Contact</a>
+	</div>
+	<div id="menu2">
+		<a class="menu2" href="./minesweeper.html">Minesweeper</a>
+		<a class="menu2" href="./plantmonitor.html">Plant Monitor</a>
+		<a class="menu2" href="./scheduleplanner.html">Schedule Planner</a>
+		<a class="menu2" href="./carkit.html">Car Kit</a>
+		<a class="menu2" href="./gta2d.html">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html">GTA 3D</a>
+	</div>
+	<div id="content">
+		<h1>GTA 2D</h1>
+		<img id="gta2d_image1" src="./gta2d1.png" alt="gta2d_image1"></img>
+		<h2>Description</h2>
+		<p>The inspiration was the first Grand Theft Auto game, it was on of my favourites when I was a kid. I wanted to develop some game, and this was interesting and hard enough to try.</p>
+		<p>I started with drawing a street and a car (everything made of rectangles) in order to test the movement and the collision. I used tkinter for the graphics. This was hard enough, then I found out about pygame. This module was really helpful because it does everything that I couldn't develop, so I had to focus only on design.</p>
+		<p>In the game you control a car (a sedan or a truck) and your mission is to collect the (brown) boxes that are scattered througout the map and return them to the site. You start at the site. There is a display at the top left of the screen, it shows your total number of boxes collected, number of boxes in the car, health, speed, time passed. The car is controlled with the arrow buttons. Picking up simply means to collide with the box. With a box onboard you have to return to the site and unload it by pressing U. Here you can change car (sedan or truck, truck is slower but can carry more boxes) by pressing C. You lose health when you collide with buildings and other cars. Health can be recovered by picking up health boxes (white). By pressing R you can start the radio, and using this button you can skip to another song. Pressing M opens the map, the red dot marks you. You can navigate on the map with the arrow buttons. By pressing the numbers 1, 2, 3, you can mark your place on the map with a yellow dot.</p>
+		<h2>Source</h2>
+		<p></p>
+		<img id="gta2d_image2" src="./gta2d2.png" alt="gta2d_image2"></img>
+		<h2>To do</h2>
+		<ul>
+			<li>map design, modification and handling are too hard</li>
+			<li>better sound effects (pickung up box, etc)</li>
+			<li>radion randomization: not the last track again</li>
+			<li>traffic should turn back at street end, not disappear; when two cars meet, they should turn back or jump over randomly</li>
+			<li>music: create a folder where the user can put his own music</li>
+		</ul>
+		<img id="gta2d_image3" src="./gta2d3.png" alt="gta2d_image3"></img>
+		<h2>Download</h2>
+		<a href="./.html"></a>
+	</div>
+	<div id="footer">
+		&copy; 2022
+	</div>
+</body>
+
+</html>

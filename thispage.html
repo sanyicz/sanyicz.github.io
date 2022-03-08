@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>This page</title>
+<link rel="stylesheet" href="./style.css"> <!-- external css -->
+<script language="JavaScript" type="text/javascript" src="./scripts.js"></script> <!--external javascript -->
+</head>
+
+<body onload='changeLang("");'>
+	<div id="header">
+		<div id="logo">
+			<img id="logo" src="./logo1.jpg" alt="logo"></img>
+		</div>
+		<div id="title">
+			<button class="changeLang" onclick='changeLang("en");'>EN</button>
+			<button class="changeLang" onclick='changeLang("hu");'>HU</button>
+			<h1 lang="en">This page</h1>
+			<h1 lang="hu">Ez az oldal</h1>
+		</div>
+	</div>
+	<div id="menu1">
+		<!-- english -->
+		<a class="menu1" href="./index.html" lang="en">Home</a>
+		<a class="menu1" href="./projects.html" lang="en">Projects</a>
+		<a class="menu1" href="./about.html" lang="en">About</a>
+		<a class="menu1" href="./contact.html" lang="en">Contact</a>
+		<!-- magyar -->
+		<a class="menu1" href="./index.html" lang="hu">Főoldal</a>
+		<a class="menu1" href="./projects.html" lang="hu">Projektek</a>
+		<a class="menu1" href="./about.html" lang="hu">Rólunk</a>
+		<a class="menu1" href="./contact.html" lang="hu">Kapcsolat</a>
+	</div>
+	<div id="menu2">
+		<!-- english -->
+		<a class="menu2" href="./minesweeper.html" lang="en">Minesweeper</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="en">Schedule Planner</a>
+		<a class="menu2" href="./plantmonitor.html" lang="en">Plant Monitor</a>
+		<a class="menu2" href="./carkit.html" lang="en">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="en">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="en">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="en">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="en">This page</a>
+		<!-- magyar -->
+		<a class="menu2" href="./minesweeper.html" lang="hu">Aknakereső</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="hu">Beosztástervező</a>
+		<a class="menu2" href="./plantmonitor.html" lang="hu">Növénymonitor</a>
+		<a class="menu2" href="./carkit.html" lang="hu">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="hu">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="hu">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="hu">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="hu">Ez az oldal</a>
+	</div>
+	<div id="content_en" lang="en">
+		<!-- english -->
+		<h1>This page</h1>
+
+		<h2>Description</h2>
+		<p></p>
+		
+		<h2>Source</h2>
+		<p></p>
+		
+		<h2>To do</h2>
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+	<div id="content_hu" lang="hu">
+		<!-- magyar -->
+		<h1>Ez az oldal</h1>
+
+		<h2>Leírás</h2>
+		<p></p>
+		
+		<h2>Forráskód</h2>
+		<p></p>
+		
+		<h2>Tennivalók</h2>
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+	<div id="footer">
+		&copy; 2022
+	</div>
+</body>
+
+</html>

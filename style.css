@@ -1,0 +1,219 @@
+/* only for index.html */
+a.menu {
+	color: black;
+	display: block;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	/* border: solid 1px lightblue; */
+	padding: 10px;
+	width: 250px;
+	margin: auto;
+	text-decoration: none;
+}
+
+a.menu:hover {
+	background-color: red;
+}
+
+body {
+	background: linear-gradient(to top right, lightblue, white) no-repeat center center fixed; 
+}
+
+/*---------------------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	/* border: solid 1px green; */
+}
+
+#header {
+	height: 180px;
+}
+
+#logo {
+	height: 100%; /* to fill parent (#header height;) */
+	float: left;
+}
+
+#title {
+	height: 100%; /* to fill parent (#header height;) */
+	text-align: center;
+	/* background-image: linear-gradient(to top right, lightblue, white); */
+	background-color: transparent;
+}
+
+#title h1 { /* h1 that are in #title */
+	color: black;
+	font-size: clamp(40px, 30vh, 80px);
+	font-weight: bold;
+	padding-top: 30px;
+	margin: 0;
+}
+
+button.changeLang { /* buttons that have class="changeLang" */
+	float: right;
+	background-color: transparent;
+	border: 0;
+}
+
+button.changeLang:hover {
+	background-color: red;
+}
+
+#menu1 {
+	height: 40px;
+	border: 0;
+}
+
+a.menu1 { /* links that have class="menu1" */
+	/* background-color: lightblue; */
+	background-color: transparent;
+	display: inline-block; /* default: inline */
+	float: left;
+	/* border: solid 1px red; */
+	width: 25%; /* 4 menu elements */
+	height: 100%; /* to fill parent (#menu1 height;) */
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	line-height: 40px; /* same as menu1 height */
+	font-size: 30px;
+}
+
+a.menu1:hover {
+	background-color: red;
+}
+
+#menu2 {
+	/* border: solid 1px lightblue; */
+	background-image: linear-gradient(to bottom left, lightblue, white);
+	opacity: 0.2;
+	width: 150px;
+	/* height: 100vh; */
+	/* display: inline-block; */
+	float: right;
+	position: fixed; /* position relative to document */
+	z-index: 999;
+	top: 220px; /* 180 + 40 */
+	right: 0px;
+}
+
+#menu2:hover {
+	opacity: 1;
+}
+
+a.menu2 { /* links that have class=menu2 */
+	display: block; /* default: inline */
+	text-decoration: none;
+}
+
+#content #content_en #content_hu  {
+	/* border: solid 1px green; */
+	/* height: 100vh; */
+	overflow: hidden; /* to contain elements (image, etc) */
+	padding: 10px;
+	text-align: justify;
+	/* background-image: linear-gradient(to bottom right, lightblue, white); */
+	background-color: transparent;
+}
+
+#content > p, #content_en > p, #content_hu > p { /* paragraphs that are children on #content, #content_en of #content_hu */
+	text-indent: 10px;
+}
+
+#footer {
+	background-image: linear-gradient(to top right, lightblue, white);
+	/* position: fixed;
+    bottom: 0%;
+	width: 100%; */
+}
+
+/* ul { */
+	/* list-style-position: inside; */
+	/* text-indent: 20px; */
+/* }​ */
+
+
+
+
+/* only for minesweeper.html */
+#minesweeper_image1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+
+/* only for scheduleplanner.html */
+#scheduleplanner_image1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+#scheduleplanner_image2 {
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+/* only for carkit.html */
+#carkit_image1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+#carkit_image2 {
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+/* only for gta2d.html */
+#gta2d_image1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+#gta2d_image2 {
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+#gta2d_image3 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
+
+/* only for gta3d.html */
+#gta3d_image1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 60%;
+}
+
+/* only for projecteuler.html */
+#projecteuler_image1 {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 40%;
+}
