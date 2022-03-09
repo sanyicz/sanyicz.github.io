@@ -1,24 +1,13 @@
-/*if (localStorage.getItem("actualLanguageCode") == null) {
-	localStorage.setItem("actualLanguageCode", "hu");
-}*/
-/*
-var actualLanguageCode;
-if (localStorage.getItem("actualLanguageCode") == null) {
+//set default language as hungarian in first run
+var actualLanguageCode = localStorage.getItem("actualLanguageCode");
+if (actualLanguageCode == "null") {
 	actualLanguageCode = "hu";
+	localStorage.setItem("actualLanguageCode", actualLanguageCode);
 }
-else {
-	actualLanguageCode = localStorage.getItem("actualLanguageCode");
-}*/
-/*var actualLanguageCode = localStorage.getItem("actualLanguageCode");
-console.log("actualLanguageCode: ", actualLanguageCode);*/
+console.log("actualLanguageCode: ", actualLanguageCode);
 
 
 function changeLang(languageCode) {
-	//set default language as hun in first run
-	if (localStorage.getItem("actualLanguageCode") == null) {
-		localStorage.setItem("actualLanguageCode", "hu");
-	}
-	
 	//console.log("running");
 	
 	//write current year in footer
