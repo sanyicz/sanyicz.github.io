@@ -8,31 +8,53 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>GTA 3D</title>
 <link rel="stylesheet" href="./style.css"> <!-- external css -->
+<script language="JavaScript" type="text/javascript" src="./scripts.js"></script> <!--external javascript -->
 </head>
 
-<body>
+<body onload='changeLang("");'>
+	<div id="contentWrap">
 	<div id="header">
 		<div id="logo">
 			<img id="logo" src="./logo1.jpg" alt="logo"></img>
 		</div>
 		<div id="title">
+			<button class="changeLang" onclick='changeLang("en");'>EN</button>
+			<button class="changeLang" onclick='changeLang("hu");'>HU</button>
 			<h1 lang="en">GTA 3D</h1>
-			<!-- <h1 lang="hu">GTA 2D</h1> -->
+			<h1 lang="hu">GTA 2D</h1>
 		</div>
 	</div>
 	<div id="menu1">
-		<a class="menu1" href="./index.html">Home</a>
-		<a class="menu1" href="./projects.html">Projects</a>
-		<a class="menu1" href="./about.html">About</a>
-		<a class="menu1" href="./contact.html">Contact</a>
+		<!-- english -->
+		<a class="menu1" href="./index.html" lang="en">Home</a>
+		<a class="menu1" href="./projects.html" lang="en">Projects</a>
+		<a class="menu1" href="./about.html" lang="en">About</a>
+		<a class="menu1" href="./contact.html" lang="en">Contact</a>
+		<!-- magyar -->
+		<a class="menu1" href="./index.html" lang="hu">Főoldal</a>
+		<a class="menu1" href="./projects.html" lang="hu">Projektek</a>
+		<a class="menu1" href="./about.html" lang="hu">Rólunk</a>
+		<a class="menu1" href="./contact.html" lang="hu">Kapcsolat</a>
 	</div>
 	<div id="menu2">
-		<a class="menu2" href="./minesweeper.html">Minesweeper</a>
-		<a class="menu2" href="./plantmonitor.html">Plant Monitor</a>
-		<a class="menu2" href="./scheduleplanner.html">Schedule Planner</a>
-		<a class="menu2" href="./carkit.html">Car Kit</a>
-		<a class="menu2" href="./gta2d.html">GTA 2D</a>
-		<a class="menu2" href="./gta3d.html">GTA 3D</a>
+		<!-- english -->
+		<a class="menu2" href="./minesweeper.html" lang="en">Minesweeper</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="en">Schedule Planner</a>
+		<a class="menu2" href="./plantmonitor.html" lang="en">Plant Monitor</a>
+		<a class="menu2" href="./carkit.html" lang="en">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="en">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="en">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="en">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="en">This page</a>
+		<!-- magyar -->
+		<a class="menu2" href="./minesweeper.html" lang="hu">Aknakereső</a>
+		<a class="menu2" href="./scheduleplanner.html" lang="hu">Beosztástervező</a>
+		<a class="menu2" href="./plantmonitor.html" lang="hu">Növénymonitor</a>
+		<a class="menu2" href="./carkit.html" lang="hu">Car Kit</a>
+		<a class="menu2" href="./gta2d.html" lang="hu">GTA 2D</a>
+		<a class="menu2" href="./gta3d.html" lang="hu">GTA 3D</a>
+		<a class="menu2" href="./projecteuler.html" lang="hu">Project Euler</a>
+		<a class="menu2" href="./thispage.html" lang="hu">Ez az oldal</a>
 	</div>
 	<div id="content">
 		<h1>GTA 3D</h1>
@@ -51,8 +73,10 @@
 		<h2>Download</h2>
 		<a href="./.html"></a>
 	</div>
+	</div>  <!-- end of contentWrap -->
+	
 	<div id="footer">
-		&copy; 2022
+		&copy; <span id="year"></span>
 	</div>
 </body>
 

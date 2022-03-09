@@ -16,15 +16,18 @@ a.menu:hover {
 	background-color: red;
 }
 
-body {
+/*body {
 	background: linear-gradient(to top right, lightblue, white) no-repeat center center fixed; 
-}
+}*/
 
 /*---------------------------*/
 
 body {
+	background: linear-gradient(to top right, lightblue, white) no-repeat center center fixed; 
 	margin: 0;
 	padding: 0;
+	position: relative;
+	min-height: 100vh;
 }
 
 div {
@@ -126,11 +129,16 @@ a.menu2 { /* links that have class=menu2 */
 	text-indent: 10px;
 }
 
+#contentWrap {
+	padding-bottom: 20px; /* same as footer height */
+}
+
 #footer {
 	background-image: linear-gradient(to top right, lightblue, white);
 	position: absolute;
-    	bottom: 0;
+    bottom: 0;
 	width: 100%;
+	height: 20px; /* same as contentWrap padding-bottom */
 }
 
 /* ul { */

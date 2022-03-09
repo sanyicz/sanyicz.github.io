@@ -1,8 +1,12 @@
 var actualLanguageCode = localStorage.getItem("actualLanguageCode");
 //console.log("actualLanguageCode:", actualLanguageCode);
 
+
 function changeLang(languageCode) {
 	//console.log("running");
+	
+	//write current year in footer
+	document.getElementById("year").innerHTML = new Date().getFullYear();
 	
 	actualLanguageCode = localStorage.getItem("actualLanguageCode");
 	//console.log("1:", localStorage.getItem("actualLanguageCode"));

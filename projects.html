@@ -12,6 +12,7 @@
 </head>
 
 <body onload='changeLang("");'>
+	<div id="contentWrap">
 	<div id="header">
 		<div id="logo">
 			<img id="logo" src="./logo1.jpg" alt="logo"></img>
@@ -56,6 +57,7 @@
 		<a class="menu2" href="./thispage.html" lang="hu">Ez az oldal</a>
 	</div>
 	<div id="content_en" lang="en">
+		<!-- english -->
 		<h1>Projects</h1>
 		<h2>Python</h2>
 			<h3>Minesweeper</h3>
@@ -88,6 +90,7 @@
 				<a href="./thispage.html">More...</a>
 	</div>
 	<div id="content_hu" lang="hu">
+		<!-- magyar -->
 		<h1>Projektek</h1>
 		<h2>Python</h2>
 			<h3>Aknakereső</h3>
@@ -118,8 +121,10 @@
 				<p></p>
 				<a href="./thispage.html">Tovább...</a>
 	</div>
+	</div> <!-- end of contentWrap -->
+	
 	<div id="footer">
-		&copy; 2022
+		&copy; <span id="year"></span>
 	</div>
 </body>
 
