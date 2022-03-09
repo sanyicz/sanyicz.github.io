@@ -1,6 +1,6 @@
 var actualLanguageCode = localStorage.getItem("actualLanguageCode");
 console.log("actualLanguageCode: ", actualLanguageCode);
-if (actualLanguageCode == null) {
+if (actualLanguageCode === null) {
 	actualLanguageCode = "hu";
 }
 console.log("actualLanguageCode: ", actualLanguageCode);
@@ -22,7 +22,7 @@ function changeLang(languageCode) {
 	}
 	else if (languageCode != actualLanguageCode) {
 		//change language
-		console.log("change language");
+		console.log("change language to", languageCode);
 	}
 	
 	localStorage.setItem("actualLanguageCode", languageCode);
