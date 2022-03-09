@@ -31,7 +31,7 @@ div {
 }
 
 #header {
-	height: 180px;
+	height: clamp(40px, 30vw, 180px);
 }
 
 #logo {
@@ -48,7 +48,7 @@ div {
 
 #title h1 { /* h1 that are in #title */
 	color: black;
-	font-size: clamp(40px, 30vh, 80px);
+	font-size: clamp(20px, 10vw, 80px);
 	font-weight: bold;
 	padding-top: 30px;
 	margin: 0;
@@ -82,7 +82,7 @@ a.menu1 { /* links that have class="menu1" */
 	text-align: center;
 	color: black;
 	line-height: 40px; /* same as menu1 height */
-	font-size: 30px;
+	font-size: clamp(10px, 6vw, 30px);
 }
 
 a.menu1:hover {
