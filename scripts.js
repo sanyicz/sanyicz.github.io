@@ -1,9 +1,9 @@
-console.log("running");
 var actualLanguageCode = localStorage.getItem("actualLanguageCode");
-console.log("actualLanguageCode:", actualLanguageCode);
+console.log("actualLanguageCode: ", actualLanguageCode);
 if (actualLanguageCode == null) {
 	actualLanguageCode = "hu";
 }
+console.log("actualLanguageCode: ", actualLanguageCode);
 
 
 function changeLang(languageCode) {
@@ -13,7 +13,7 @@ function changeLang(languageCode) {
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	
 	actualLanguageCode = localStorage.getItem("actualLanguageCode");
-	//console.log("1:", localStorage.getItem("actualLanguageCode"));
+	console.log("1: ", actualLanguageCode);
 	
 	if (languageCode == "") {
 		// console.log("default language");
