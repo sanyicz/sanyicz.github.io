@@ -16,10 +16,6 @@ a.menu:hover {
 	background-color: red;
 }
 
-/*body {
-	background: linear-gradient(to top right, lightblue, white) no-repeat center center fixed; 
-}*/
-
 /*---------------------------*/
 
 body {
@@ -131,6 +127,8 @@ a.menu2 { /* links that have class=menu2 */
 
 #contentWrap {
 	padding-bottom: 20px; /* same as footer height */
+	display: block;
+	overflow: auto;
 }
 
 #footer {
