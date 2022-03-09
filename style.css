@@ -128,9 +128,9 @@ a.menu2 { /* links that have class=menu2 */
 
 #footer {
 	background-image: linear-gradient(to top right, lightblue, white);
-	/* position: fixed;
-    bottom: 0%;
-	width: 100%; */
+	position: absolute;
+    	bottom: 0;
+	width: 100%;
 }
 
 /* ul { */
