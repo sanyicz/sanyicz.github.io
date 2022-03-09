@@ -35,8 +35,8 @@ div {
 }
 
 #logo {
-	height: 100%; /* to fill parent (#header height;) */
 	float: left;
+	height: 100%; /* to fill parent (#header height;) */
 }
 
 #title {
@@ -67,6 +67,7 @@ button.changeLang:hover {
 #menu1 {
 	height: 40px;
 	border: 0;
+	max-width: 25vw%;
 }
 
 a.menu1 { /* links that have class="menu1" */

@@ -1,5 +1,5 @@
 var actualLanguageCode = localStorage.getItem("actualLanguageCode");
-//console.log("actualLanguageCode:", actualLanguageCode);
+console.log("actualLanguageCode:", actualLanguageCode);
 if (actualLanguageCode == null) {
 	actualLanguageCode = "hu";
 }
