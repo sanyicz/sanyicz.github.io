@@ -1,10 +1,15 @@
+if (localStorage.getItem("actualLanguageCode") == null) {
+	localStorage.setItem("actualLanguageCode", "hu");
+}
+/*
 var actualLanguageCode;
 if (localStorage.getItem("actualLanguageCode") == null) {
 	actualLanguageCode = "hu";
 }
 else {
 	actualLanguageCode = localStorage.getItem("actualLanguageCode");
-}
+}*/
+var actualLanguageCode = localStorage.getItem("actualLanguageCode");
 console.log("actualLanguageCode: ", actualLanguageCode);
 
 
