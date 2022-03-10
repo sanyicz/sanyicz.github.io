@@ -1,0 +1,28 @@
+div = document.createElement('div'); //create div element
+const att = document.createAttribute("id"); //create id attribute
+att.value = "menu2"; //set the value of the attribute:
+div.setAttributeNode(att); //add the id attribute to the div
+
+var listEn = [
+  ["Minesweeper", "./minesweeper.html"],
+  ["Schedule Planner", ],
+  ["Plant Moniter", ],
+];
+foreach (listEn as elementEn) {
+  //create link
+  a = document.createElement('a');
+  //set class
+  const att = document.createAttribute("class");
+  att.value = "menu2";
+  a.setAttributeNode(att);
+  //set href
+  const att = document.createAttribute("href");
+  att.value = elementEn[1];
+  a.setAttributeNode(att);
+  //set lang as en
+  const att = document.createAttribute("lang");
+  att.value = "en";
+  a.setAttributeNode(att);
+  //set value
+  a.innerHTML = elementEn[0];
+}
