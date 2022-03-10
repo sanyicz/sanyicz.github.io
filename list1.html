@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 
 <head>
-<script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Suli-Host ráéréskezelő</title>
 
+<style>
+a.menu2 { /* links that have class="menu1" */
+	display: block;
+}
+</style>
+</head>
+
+<body>
+<h1>List with js</h1>
+
+<script>
+const element = document.createElement("h2");
+const text = document.createTextNode("created with js");
+element.appendChild(text);
+document.body.appendChild(element);
+
+</script>
+
+<script>
 const div = document.createElement('div'); //create div element
-const att = document.createAttribute("id"); //create id attribute
+var att = document.createAttribute("id"); //create id attribute
 att.value = "menu2"; //set the value of the attribute:
 div.setAttributeNode(att); //add the id attribute to the div
 
@@ -13,19 +35,19 @@ var listEn = [
   ["Schedule Planner", ],
   ["Plant Moniter", ],
 ];
-foreach (listEn as elementEn) {
+for (const elementEn of listEn) {
   //create link
   a = document.createElement('a');
   //set class
-  const att = document.createAttribute("class");
+  att = document.createAttribute("class");
   att.value = "menu2";
   a.setAttributeNode(att);
   //set href
-  const att = document.createAttribute("href");
+  att = document.createAttribute("href");
   att.value = elementEn[1];
   a.setAttributeNode(att);
   //set lang as en
-  const att = document.createAttribute("lang");
+  att = document.createAttribute("lang");
   att.value = "en";
   a.setAttributeNode(att);
   //set value
@@ -33,10 +55,7 @@ foreach (listEn as elementEn) {
   //set link element as child of div
   div.appendChild(a);
 }
-  
+document.body.appendChild(div);
 </script>
-</head>
 
-<body>
-  <h1>List with js</h1>
 </body>
