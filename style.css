@@ -116,7 +116,7 @@ a.menu2 { /* links that have class=menu2 */
 	text-decoration: none;
 }
 
-#content #content_en #content_hu  {
+#content, #content_en, #content_hu  {
 	/* border: solid 1px green; */
 	/* height: 100vh; */
 	overflow: hidden; /* to contain elements (image, etc) */
@@ -140,7 +140,7 @@ a.menu2 { /* links that have class=menu2 */
 #footer {
 	background-image: linear-gradient(to top right, lightblue, white);
 	position: absolute;
-    bottom: 0;
+    	bottom: 0;
 	width: 100%;
 	height: 20px; /* same as contentWrap padding-bottom */
 }
