@@ -120,7 +120,7 @@ a.menu2 { /* links that have class=menu2 */
 	/* border: solid 1px green; */
 	/* height: 100vh; */
 	overflow: hidden; /* to contain elements (image, etc) */
-	padding: 20px 30px 20px 30px;
+	padding: 0px 30px 20px 30px;
 	text-align: justify;
 	/* background-image: linear-gradient(to bottom right, lightblue, white); */
 	background-color: transparent;
@@ -132,7 +132,6 @@ a.menu2 { /* links that have class=menu2 */
 
 #contentWrap {
 	padding-bottom: 20px; /* same as footer height */
-	/*padding: 20px 30px 20px 30px;*/
 	display: block;
 	overflow: auto;
 }
