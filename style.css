@@ -41,7 +41,6 @@ div {
 #logo {
 	float: left;
 	height: 100%; /* to fill parent (#header height;) */
-	box-shadow: 0 0 8px 8px white inset;
 }
 
 #title {
