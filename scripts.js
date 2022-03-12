@@ -32,7 +32,7 @@ function changeLang(languageCode) {
 	
 	for (var i=1, max=all.length; i < max; i++) { //i=0 is the <html lang="en"> element
 		element = all[i];
-		console.dir(element);
+		//console.dir(element);
 		if (element.hasAttribute("lang")) {
 			//console.log('hasAttribute("lang"):', element);
 			var attr = element.getAttribute("lang");
