@@ -26,7 +26,7 @@
 		</div>
 		
 		<div id="menu1"></div>
-		<script onload='changeLang("");'>
+		<script>
 			fetch("menu1.html")
 			.then(result => result.text())
 			.then(text => {
@@ -36,6 +36,7 @@
 			console.log("menu1 fetched");
 			var menu1 = document.getElementById("menu1");
 			console.log(menu1);
+			changeLang("");
 		</script>
 		
 		<div id="menu2"></div>
