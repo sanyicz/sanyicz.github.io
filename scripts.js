@@ -34,7 +34,7 @@ function changeLang(languageCode) {
 		element = all[i];
 		//console.dir(element);
 		if (element.hasAttribute("lang")) {
-			console.log('hasAttribute("lang"):', element);
+			//console.log('hasAttribute("lang"):', element);
 			var attr = element.getAttribute("lang");
 			if (attr == languageCode) {element.style.display = "";}
 			else {element.style.display = "none";};
