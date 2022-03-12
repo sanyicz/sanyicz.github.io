@@ -44,3 +44,8 @@ function changeLang(languageCode) {
 	//console.log("done");
 	return;
 };
+
+
+function onLoad() {
+	changeLang("");
+}

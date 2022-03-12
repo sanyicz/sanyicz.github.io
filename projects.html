@@ -9,15 +9,9 @@
 <title>Projects</title>
 <link rel="stylesheet" href="./style.css"> <!-- external css -->
 <script language="JavaScript" type="text/javascript" src="./scripts.js"></script> <!--external javascript -->
-<script>
-document.observe("dom:loaded", function() {
-	changeLang("");
-});
-</script>
 </head>
 
-<!-- <body onload='changeLang("");'> -->
-<body>
+<body onload='changeLang("");'>
 	<div id="contentWrap">
 		<div id="header">
 			<div id="logo">
@@ -32,7 +26,7 @@ document.observe("dom:loaded", function() {
 		</div>
 		
 		<div id="menu1"></div>
-		<script>
+		<script onload='changeLang("");'>
 			fetch("menu1.html")
 			.then(result => result.text())
 			.then(text => {
