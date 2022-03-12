@@ -26,16 +26,10 @@
 		<a lang="hu" class="menu" href="./about.html">Rólunk</a>
 		<a lang="hu" class="menu" href="./contact.html">Kapcsolat</a>
 		</div>
-		
-		<!-- <a href=""><img alt="about" src="./about.jpg" width="150" height="70"></a> -->
 	</div>  <!-- end of contentWrap -->
 	
-	<!-- <script id="menu2" src="nav2.js"></script> -->
 	<div id="menu2"></div>
 	<script>
-		<!-- var element = document.getElementById("menu2"); -->
-		<!-- element.insertAdjacentHTML("afterbegin", '<a class="menu2" href="./minesweeper.html" lang="en">Minesweeper</a>'); -->
-		
 		fetch("nav2.html")
 		.then(result => result.text())
 		.then(text => {
