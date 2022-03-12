@@ -1,4 +1,8 @@
 console.log("Fetching...");
+
+var actualLanguageCode = localStorage.getItem("actualLanguageCode");
+console.log("actualLanguageCode: ", actualLanguageCode);
+
 //load nav bar html
 fetch("nav2.html")
 .then(result => result.text())
@@ -11,4 +15,5 @@ fetch("nav2.html")
 	newElement.setAttributeNode(attr);
 	oldElement.parentNode.replaceChild(newElement, oldElement);
 })
+
 console.log("Fetched");
