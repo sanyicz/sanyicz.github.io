@@ -1,3 +1,4 @@
+console.log("Fetching...");
 //load nav bar html
 fetch("nav2.html")
 .then(result => result.text())
@@ -10,3 +11,4 @@ fetch("nav2.html")
 	newElement.setAttributeNode(attr);
 	oldElement.parentNode.replaceChild(newElement, oldElement);
 })
+console.log("Fetched");
