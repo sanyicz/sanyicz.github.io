@@ -13,103 +13,104 @@
 
 <body onload='changeLang("");'>
 	<div id="contentWrap">
-	<div id="header">
-		<div id="logo">
-			<img id="logo" src="./logo1.jpg" alt="logo"></img>
+		<div id="header">
+			<div id="logo">
+				<img id="logo" src="./logo1.jpg" alt="logo"></img>
+			</div>
+			<div id="title">
+				<button class="changeLang" onclick='changeLang("en");'>EN</button>
+				<button class="changeLang" onclick='changeLang("hu");'>HU</button>
+				<h1 lang="en">Projects</h1>
+				<h1 lang="hu">Projektek</h1>
+			</div>
 		</div>
-		<div id="title">
-			<button class="changeLang" onclick='changeLang("en");'>EN</button>
-			<button class="changeLang" onclick='changeLang("hu");'>HU</button>
-			<h1 lang="en">Projects</h1>
-			<h1 lang="hu">Projektek</h1>
+		
+		<div id="menu1">
+		<script>
+			fetch("menu1.html")
+			.then(result => result.text())
+			.then(text => {
+				var element = document.getElementById("menu1");
+				element.insertAdjacentHTML("afterbegin", text);
+			})
+		</script>
 		</div>
-	</div>
-	<div id="menu1">
-		<!-- english -->
-		<a class="menu1" href="./index.html" lang="en">Home</a>
-		<a class="menu1" href="./projects.html" lang="en">Projects</a>
-		<a class="menu1" href="./about.html" lang="en">About</a>
-		<a class="menu1" href="./contact.html" lang="en">Contact</a>
-		<!-- magyar -->
-		<a class="menu1" href="./index.html" lang="hu">Főoldal</a>
-		<a class="menu1" href="./projects.html" lang="hu">Projektek</a>
-		<a class="menu1" href="./about.html" lang="hu">Rólunk</a>
-		<a class="menu1" href="./contact.html" lang="hu">Kapcsolat</a>
-	</div>
-	<div id="menu2"></div>
-	<script>
-		fetch("nav2.html")
-		.then(result => result.text())
-		.then(text => {
-			var element = document.getElementById("menu2");
-			element.insertAdjacentHTML("afterbegin", text);
-		})
-	</script>
-	<div id="content_en" lang="en">
-		<!-- english -->
-		<h1>Projects</h1>
-		<h2>Python</h2>
-			<h3>Minesweeper</h3>
-				<p>An implementation of the classic game. You can change the difficulty (the mine density) by setting the number of mines, the width and height of the field. You can start the game by clicking New game. By left click you can open a field. The number you see on the tile is the total number of mines in neighnouring tiles. By right click you can mark a field with an M for mine. The goal is to mark every mine and open every field without a mine.</p>
-				<a href="./minesweeper.html">More...</a>
-			<h3>Schedule Planner</h3>
-				<p>The idea came from the company where I worked. I was a kitchen helper and transporter in the kitchen for the hospitals in Szeged. I was employed through an employment agency and our schedule was made weekly based on the messages in which we wrote when we had free time to work. This program is an exercise to make a software that can help one to manage these schedules better. It was never published and used.</p>
-				<a href="./scheduleplanner.html">More...</a>
-			<h3>GTA 2D</h3>
-				<p>The inspiration was the first Grand Theft Auto game, it was on of my favourites when I was a kid. I wanted to develop some game, and this was interesting and hard enough to try.</p>
-				<p>In the game you control a car (a sedan or a truck) and your mission is to collect the boxes that are scattered througout the map and return them to the site.</p>
-				<a href="./gta2d.html">More...</a>
-			<h3>Project Euler</h3>
-				<p>In order to practice programming with Python, I have started to solve the problems of Project Euler. In general, the site asks it's partakers not to share the solutions, but it does not strictly apply for the first 100 problems. I have solved the first 59 problems so far, these solutions can be found here.</p>
-				<a href="./projecteuler.html">More...</a>
-		<h2>Arduino</h2>
-			<h3>Car Kit</h3>
-				<p>The onboard computer display in my car is not working - that's where the idea came from. I wanted to recreate some of the functionality of this display.</p>
-				<a href="./carkit.html">More...</a>
-			<h3>Plant Monitor</h3>
-				<p>A device created to regularly measure and save the following parameters in order to monitor and control a plant's growth: air temperature, air relative humidity, soil moisture.</p>
-				<a href="./plantmonitor.html">More...</a>
-		<h2>Unity</h2>
-			<h3>GTA 3D</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at lacinia odio, at dignissim purus. Suspendisse tristique dui sodales laoreet ultricies. Morbi luctus eleifend arcu. Nam semper justo non leo porttitor, quis pellentesque lacus condimentum. Ut quis elit eget diam viverra ultricies nec at ex. Fusce non eros tristique, scelerisque enim at, vehicula lorem. Suspendisse eu nunc tincidunt, ultrices orci in, luctus diam. Nulla pellentesque, sapien a sagittis egestas, mi enim vehicula dolor, a egestas arcu elit sed libero. Curabitur hendrerit bibendum eleifend. Suspendisse in dictum orci, id sollicitudin orci. Nam vulputate sem eu mi porta, vel pretium enim luctus.</p>
-				<a href="./gta3d.html">More...</a>
-		<h2>HTML, CSS, Javascript</h2>
-			<h3>This page</h3>
-				<p></p>
-				<a href="./thispage.html">More...</a>
-	</div>
-	<div id="content_hu" lang="hu">
-		<!-- magyar -->
-		<h1>Projektek</h1>
-		<h2>Python</h2>
-			<h3>Aknakereső</h3>
-				<p>A klasszikus játék egy megvalósítása. A nehézséget (az aknasűrűséget) az aknák számának és a játéktér méretének változtatásával lehet beállítani. A New game (Új játék) gombra kattintva indul a játék. Bal kattintással felfedhető egy mező. A mezőn lévő szám az összes szomszédos akna számát jelenti, ez legfeljebb 8 lehet. Jobb kattintással lehet egy mezőt aknának jelölni, ekkor egy M (mine = akna) jelenik meg rajta. A cél az összes akna megjelölése és az összes akna nélküli mező felfedése.</p>
-				<a href="./minesweeper.html">Tovább...</a>
-			<h3>Beosztástervező</h3>
-				<p>Az ötlet onnan jött, hogy diákként dolgoztam egy kórház konyháján iskolaszövetkezeten keresztül. Heti beosztásunk volt, amit az üzenetben elküldött ráéréseink, szabadidőnk alapján készítettek. Ez a program a beosztástervezés és -kezelés jobb menedzselésére készült saját ötlet alapján, gyakorlásként, de nem volt bemutatva és használva.</p>
-				<a href="./scheduleplanner.html">Tovább...</a>
-			<h3>GTA 2D</h3>
-				<p></p>
-				<a href="./gta2d.html">Tovább...</a>
-			<h3>Project Euler</h3>
-				<p>A Project Euler matematikai és programozási feladatok gyűjteménye. A Python tanulása közben kezdtem el gyakorlásként az itt található problémákat megoldani. Az oldal arra kéri a résztvevőket, hogy ne osszák meg a feladatok megoldását, viszont ez nem vonatkozik az első 100 problémára. Eddig az első 59 feladatot oldottam meg, ezek megoldása található itt.</p>
-				<a href="./projecteuler.html">Tovább...</a>
-		<h2>Arduino</h2>
-			<h3>Car Kit</h3>
-				<p></p>
-				<a href="./carkit.html">Tovább...</a>
-			<h3>Növénymonitor</h3>
-				<p></p>
-				<a href="./plantmonitor.html">Tovább...</a>
-		<h2>Unity</h2>
-			<h3>GTA 3D</h3>
-				<p></p>
-				<a href="./gta3d.html">Tovább...</a>
-		<h2>HTML, CSS, Javascript</h2>
-			<h3>Ez az oldal</h3>
-				<p></p>
-				<a href="./thispage.html">Tovább...</a>
-	</div>
+		
+		<div id="menu2"></div>
+		<script>
+			fetch("menu2.html")
+			.then(result => result.text())
+			.then(text => {
+				var element = document.getElementById("menu2");
+				element.insertAdjacentHTML("afterbegin", text);
+			})
+		</script>
+		
+		<div id="content_en" lang="en">
+			<!-- english -->
+			<h1>Projects</h1>
+			<h2>Python</h2>
+				<h3>Minesweeper</h3>
+					<p>An implementation of the classic game. You can change the difficulty (the mine density) by setting the number of mines, the width and height of the field. You can start the game by clicking New game. By left click you can open a field. The number you see on the tile is the total number of mines in neighnouring tiles. By right click you can mark a field with an M for mine. The goal is to mark every mine and open every field without a mine.</p>
+					<a href="./minesweeper.html">More...</a>
+				<h3>Schedule Planner</h3>
+					<p>The idea came from the company where I worked. I was a kitchen helper and transporter in the kitchen for the hospitals in Szeged. I was employed through an employment agency and our schedule was made weekly based on the messages in which we wrote when we had free time to work. This program is an exercise to make a software that can help one to manage these schedules better. It was never published and used.</p>
+					<a href="./scheduleplanner.html">More...</a>
+				<h3>GTA 2D</h3>
+					<p>The inspiration was the first Grand Theft Auto game, it was on of my favourites when I was a kid. I wanted to develop some game, and this was interesting and hard enough to try.</p>
+					<p>In the game you control a car (a sedan or a truck) and your mission is to collect the boxes that are scattered througout the map and return them to the site.</p>
+					<a href="./gta2d.html">More...</a>
+				<h3>Project Euler</h3>
+					<p>In order to practice programming with Python, I have started to solve the problems of Project Euler. In general, the site asks it's partakers not to share the solutions, but it does not strictly apply for the first 100 problems. I have solved the first 59 problems so far, these solutions can be found here.</p>
+					<a href="./projecteuler.html">More...</a>
+			<h2>Arduino</h2>
+				<h3>Car Kit</h3>
+					<p>The onboard computer display in my car is not working - that's where the idea came from. I wanted to recreate some of the functionality of this display.</p>
+					<a href="./carkit.html">More...</a>
+				<h3>Plant Monitor</h3>
+					<p>A device created to regularly measure and save the following parameters in order to monitor and control a plant's growth: air temperature, air relative humidity, soil moisture.</p>
+					<a href="./plantmonitor.html">More...</a>
+			<h2>Unity</h2>
+				<h3>GTA 3D</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at lacinia odio, at dignissim purus. Suspendisse tristique dui sodales laoreet ultricies. Morbi luctus eleifend arcu. Nam semper justo non leo porttitor, quis pellentesque lacus condimentum. Ut quis elit eget diam viverra ultricies nec at ex. Fusce non eros tristique, scelerisque enim at, vehicula lorem. Suspendisse eu nunc tincidunt, ultrices orci in, luctus diam. Nulla pellentesque, sapien a sagittis egestas, mi enim vehicula dolor, a egestas arcu elit sed libero. Curabitur hendrerit bibendum eleifend. Suspendisse in dictum orci, id sollicitudin orci. Nam vulputate sem eu mi porta, vel pretium enim luctus.</p>
+					<a href="./gta3d.html">More...</a>
+			<h2>HTML, CSS, Javascript</h2>
+				<h3>This page</h3>
+					<p></p>
+					<a href="./thispage.html">More...</a>
+		</div>
+		<div id="content_hu" lang="hu">
+			<!-- magyar -->
+			<h1>Projektek</h1>
+			<h2>Python</h2>
+				<h3>Aknakereső</h3>
+					<p>A klasszikus játék egy megvalósítása. A nehézséget (az aknasűrűséget) az aknák számának és a játéktér méretének változtatásával lehet beállítani. A New game (Új játék) gombra kattintva indul a játék. Bal kattintással felfedhető egy mező. A mezőn lévő szám az összes szomszédos akna számát jelenti, ez legfeljebb 8 lehet. Jobb kattintással lehet egy mezőt aknának jelölni, ekkor egy M (mine = akna) jelenik meg rajta. A cél az összes akna megjelölése és az összes akna nélküli mező felfedése.</p>
+					<a href="./minesweeper.html">Tovább...</a>
+				<h3>Beosztástervező</h3>
+					<p>Az ötlet onnan jött, hogy diákként dolgoztam egy kórház konyháján iskolaszövetkezeten keresztül. Heti beosztásunk volt, amit az üzenetben elküldött ráéréseink, szabadidőnk alapján készítettek. Ez a program a beosztástervezés és -kezelés jobb menedzselésére készült saját ötlet alapján, gyakorlásként, de nem volt bemutatva és használva.</p>
+					<a href="./scheduleplanner.html">Tovább...</a>
+				<h3>GTA 2D</h3>
+					<p></p>
+					<a href="./gta2d.html">Tovább...</a>
+				<h3>Project Euler</h3>
+					<p>A Project Euler matematikai és programozási feladatok gyűjteménye. A Python tanulása közben kezdtem el gyakorlásként az itt található problémákat megoldani. Az oldal arra kéri a résztvevőket, hogy ne osszák meg a feladatok megoldását, viszont ez nem vonatkozik az első 100 problémára. Eddig az első 59 feladatot oldottam meg, ezek megoldása található itt.</p>
+					<a href="./projecteuler.html">Tovább...</a>
+			<h2>Arduino</h2>
+				<h3>Car Kit</h3>
+					<p></p>
+					<a href="./carkit.html">Tovább...</a>
+				<h3>Növénymonitor</h3>
+					<p></p>
+					<a href="./plantmonitor.html">Tovább...</a>
+			<h2>Unity</h2>
+				<h3>GTA 3D</h3>
+					<p></p>
+					<a href="./gta3d.html">Tovább...</a>
+			<h2>HTML, CSS, Javascript</h2>
+				<h3>Ez az oldal</h3>
+					<p></p>
+					<a href="./thispage.html">Tovább...</a>
+		</div>
 	</div> <!-- end of contentWrap -->
 	
 	<div id="footer">
