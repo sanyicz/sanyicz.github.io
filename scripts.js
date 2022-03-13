@@ -48,4 +48,11 @@ function onLoad() {
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
 	changeLang("");
+	
+	/*
+	if (localStorage.getItem("actualLanguageCode") == "") {
+		//try language setting again in 300 milliseconds
+		setTimeout(changeLang(""), 300);
+	}
+	*/
 }

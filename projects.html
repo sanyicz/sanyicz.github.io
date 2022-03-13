@@ -38,7 +38,7 @@
 		
 		<div id="menu2"></div>
 		<script>
-			fetch("menu2.html")
+			await fetch("menu2.html")
 			.then(result => result.text())
 			.then(text => {
 				var element = document.getElementById("menu2");
