@@ -8,7 +8,7 @@ console.log("actualLanguageCode: ", actualLanguageCode);
 
 
 function changeLang(languageCode) {
-	//console.log("running");
+	console.log("changeLang running");
 	
 	actualLanguageCode = localStorage.getItem("actualLanguageCode");
 	console.log("1: ", actualLanguageCode);
