@@ -47,7 +47,7 @@ function onLoad() {
 	//write current year in footer
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
-	changeLang("");
+	setTimeout(changeLang(""), 300);
 	
 	/*
 	if (localStorage.getItem("actualLanguageCode") == "") {
