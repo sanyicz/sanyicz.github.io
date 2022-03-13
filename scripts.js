@@ -44,6 +44,7 @@ function changeLang(languageCode) {
 
 
 function onLoad() {
+	console.log("onLoad running");
 	//write current year in footer
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
