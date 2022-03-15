@@ -66,10 +66,11 @@ async function fetchAndInsert(source) {
 };
 
 async function onLoad2() {
-	await fetchAndInsert();
+	let result = await fetchAndInsert();
 	console.log("onLoad2 running");
 	//write current year in footer
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
 	changeLang("");
+	return result;
 };
