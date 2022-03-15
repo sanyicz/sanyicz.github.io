@@ -44,16 +44,19 @@ function changeLang(languageCode) {
 
 
 function onLoad() {
-	console.log("onLoad running");
 	//write current year in footer
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
-	setTimeout(changeLang(""), 300);
-	
-	/*
-	if (localStorage.getItem("actualLanguageCode") == "") {
-		//try language setting again in 300 milliseconds
-		setTimeout(changeLang(""), 300);
+	changeLang("");
+}
+
+function onLoad2() {
+	console.log("onLoad2 running");
+	//write current year in footer
+	document.getElementById("year").innerHTML = new Date().getFullYear();
+	//set language
+	while ( (sessionStorage.getItem("menu1") == 0) && (sessionStorage.getItem("menu2") == 0) ) {
+		//pass
 	}
-	*/
+	changeLang("");
 }
