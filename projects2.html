@@ -9,13 +9,9 @@
 <title>Projects</title>
 <link rel="stylesheet" href="./style.css"> <!-- external css -->
 <script language="JavaScript" type="text/javascript" src="./scripts.js"></script> <!--external javascript -->
-<script>
-sessionStorage.setItem("menu1", 0);
-sessionStorage.setItem("menu2", 0);
-</script>
 </head>
 
-<body onload='onLoad();'>
+<body onload='onLoad2();'>
 	<div id="contentWrap">
 		<div id="header">
 			<div id="logo">
@@ -36,7 +32,7 @@ sessionStorage.setItem("menu2", 0);
 			.then(text => {
 				var element = document.getElementById("menu1");
 				element.insertAdjacentHTML("afterbegin", text);
-				sessionStorage.setItem("menu1", 1);
+				const event1 = new Event("menu1");
 				console.log("menu1 fetched");
 			})
 		</script>
@@ -48,7 +44,7 @@ sessionStorage.setItem("menu2", 0);
 			.then(text => {
 				var element = document.getElementById("menu2");
 				element.insertAdjacentHTML("afterbegin", text);
-				sessionStorage.setItem("menu2", 1);
+				const event2 = new Event("menu2");
 				console.log("menu2 fetched");
 			})
 		</script>

@@ -55,8 +55,9 @@ function onLoad2() {
 	//write current year in footer
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
-	while ( (sessionStorage.getItem("menu1") == 0) && (sessionStorage.getItem("menu2") == 0) ) {
-		//pass
-	}
-	changeLang("");
+	window.addEventListener("menu1", (event1) => {
+		window.addEventListener("menu2", (event2) => {
+			changeLang("");
+		});
+	});
 }
