@@ -27,14 +27,7 @@
 		
 		<div id="menu1"></div>
 		<script>
-			fetch("menu1.html")
-			.then(result => result.text())
-			.then(text => {
-				var element = document.getElementById("menu1");
-				element.insertAdjacentHTML("afterbegin", text);
-				const event1 = new Event("menu1");
-				console.log("menu1 fetched");
-			})
+			fetchAndInsert("menu1");
 		</script>
 		
 		<div id="menu2"></div>

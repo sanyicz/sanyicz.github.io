@@ -48,16 +48,28 @@ function onLoad() {
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
 	changeLang("");
-}
+};
 
-function onLoad2() {
+
+
+
+async function fetchAndInsert(source) {
+	//source must be a string
+	fetch(source + ".html")
+	.then(result => result.text())
+	.then(text => {
+		var element = document.getElementById(source);
+		element.insertAdjacentHTML("afterbegin", text);
+		const event1 = new Event(source);
+		console.log(source + " fetched");
+	})
+};
+
+async function onLoad2() {
+	await fetchAndInsert();
 	console.log("onLoad2 running");
 	//write current year in footer
 	document.getElementById("year").innerHTML = new Date().getFullYear();
 	//set language
-	window.addEventListener("menu1", (event1) => {
-		window.addEventListener("menu2", (event2) => {
-			changeLang("");
-		});
-	});
-}
+	changeLang("");
+};
