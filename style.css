@@ -35,7 +35,7 @@ div {
 }
 
 #header {
-	height: clamp(40px, 30vw, 180px);
+	height: clamp(30px, 30vw, 180px);
 }
 
 #logo {
