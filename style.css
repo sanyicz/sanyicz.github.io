@@ -52,7 +52,7 @@ div {
 
 #title h1 { /* h1 that are in #title */
 	color: black;
-	font-size: clamp(20px, 10vw, 80px);
+	font-size: clamp(10px, 10vw, 80px);
 	font-weight: bold;
 	padding-top: 30px;
 	margin: 0;
