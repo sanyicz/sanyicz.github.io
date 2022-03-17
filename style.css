@@ -54,7 +54,7 @@ div {
 	color: black;
 	font-size: clamp(10px, 10vw, 80px);
 	font-weight: bold;
-	padding-top: 30px;
+	padding-top: 20px;
 	margin: 0;
 }
 
